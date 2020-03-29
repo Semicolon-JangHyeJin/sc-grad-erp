@@ -29,7 +29,7 @@
 				<li class="nav-item">
 					<a class="nav-link" href="#">프로필</a>
 				</li>
-				<li class="nav-item">
+				<li class="nav-item"> 
 					<a class="nav-link disabled" href="#">메세지</a>
 				</li>
 				<li class="nav-item dropdown ml-md-auto">
@@ -55,11 +55,10 @@
 						<div class="card-body">
 							<ul class="nav flex-column">
 								<li class="nav-item">
-									<a class="nav-link active" href="clientcode_manage.jsp">거래처코드 관리</a>
-									<a class="nav-link active" href="objectcode_manage.jsp">품목코드 관리</a>
-									<a class="nav-link active" href="factory_manage.jsp">공장 관리</a>
-									<a class="nav-link active" href="object_manage.jsp">제품 관리</a>
-									<a class="nav-link active" href="unitprice_manage.jsp">거래처단가 관리</a>
+									<a class="nav-link active" href="clientcode_manage.jsp">5.거래처코드 관리</a>
+									<a class="nav-link active" href="objectcode_manage.jsp">2.품목코드 관리</a>
+									<a class="nav-link active" href="object_manage.jsp">1.제품 관리</a>
+									<a class="nav-link active" href="unitprice_manage.jsp">6.거래처단가 관리</a>
 							</ul>
 						</div>
 					</div>
@@ -72,85 +71,16 @@
 						<div class="card-body">
 							<ul class="nav flex-column">
 								<li class="nav-item">
-									<a class="nav-link active" href="#">출고 관리</a>
-									<a class="nav-link active" href="#">입고 관리</a>
-									<a class="nav-link active" href="#">창고이동 관리</a>
-									<a class="nav-link active" href="#">현재고 조회</a>
-									<a class="nav-link active" href="#">재고 분석</a>
-									<a class="nav-link active" href="#">재고수불부 조회</a>
-									<a class="nav-link active" href="#">입출고 현황</a>
-									<a class="nav-link active" href="#">입출고 분석</a>
+									<a class="nav-link active" href="#">12.출고 관리</a>
+									<a class="nav-link active" href="#">11.입고 관리</a>
+									<a class="nav-link active" href="#">10.13.창고이동 관리</a>
+									<a class="nav-link active" href="#">14.재고수불부 조회</a>
 								</li>
 							</ul>
 						</div>
 					</div>
 				</div>
-				<div class="card">
-					<div class="card-header">
-						 <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-214190" href="#card-element-3">회계관리</a>
-					</div>
-					<div id="card-element-3" class="collapse">
-						<div class="card-body">
-							<ul class="nav flex-column">
-								<li class="nav-item">
-									<a class="nav-link active" href="#">계산서 관리</a>
-									<a class="nav-link active" href="#">계산서 현황 조회</a>
-									<a class="nav-link active" href="#">입출금 관리</a>
-									<a class="nav-link active" href="#">거래처잔액 조회</a>
-									<a class="nav-link active" href="#">결산손익표 조회</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="card">
-					<div class="card-header">
-						 <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-214190" href="#card-element-4">발주</a>
-					</div>
-					<div id="card-element-4" class="collapse">
-						<div class="card-body">
-							<ul class="nav flex-column">
-								<li class="nav-item">
-									<a class="nav-link active" href="#">발주 관리</a>
-									<a class="nav-link active" href="#">발주 생성</a>
-									<a class="nav-link active" href="#">발주현황 조회</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="card">
-					<div class="card-header">
-						 <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-214190" href="#card-element-5">수주</a>
-					</div>
-					<div id="card-element-5" class="collapse">
-						<div class="card-body">
-							<ul class="nav flex-column">
-								<li class="nav-item">
-									<a class="nav-link active" href="#">수주 관리</a>
-									<a class="nav-link active" href="#">수주현황 조회</a>
-									<a class="nav-link active" href="#">수주대비재고 조회</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="card">
-					<div class="card-header">
-						 <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-214190" href="#card-element-6">생산</a>
-					</div>
-					<div id="card-element-6" class="collapse">
-						<div class="card-body">
-							<ul class="nav flex-column">
-								<li class="nav-item">
-									<a class="nav-link active" href="#">작업지시현황</a>
-									<a class="nav-link active" href="#">생산자재청구 및 출고</a>
-									<a class="nav-link active" href="#">작업실적등록</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
+				
 				<div class="card">
 					<div class="card-header">
 						 <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-214190" href="#card-element-7">자재</a>
@@ -159,8 +89,8 @@
 						<div class="card-body">
 							<ul class="nav flex-column">
 								<li class="nav-item">
-									<a class="nav-link active" href="#">자재 현황</a>
-									<a class="nav-link active" href="#">자재사용 현황</a>
+									<a class="nav-link active" href="#">3.자재 현황</a>
+									<a class="nav-link active" href="#">4.자재사용 현황</a>
 								</li>
 							</ul>
 						</div>
@@ -174,9 +104,8 @@
 						<div class="card-body">
 							<ul class="nav flex-column">
 								<li class="nav-item">
-									<a class="nav-link active" href="personal_inform.jsp">인사정보 등록</a>
-									<a class="nav-link active" href="pay_inform.jsp">호봉테이블 등록</a>
-									<a class="nav-link active" href="personal_search.jsp">인사 현황</a>
+									<a class="nav-link active" href="pay_inform.jsp">7.8.호봉테이블 등록</a>
+									<a class="nav-link active" href="personal_search.jsp">9.인사 현황</a>
 								</li>
 							</ul>
 						</div>
@@ -184,10 +113,13 @@
 				</div>
 			</div>
 		</div>
+		<div class="col-md-10 mt-3">	
+			<h1>안녕하세요 semi-ERP 시스템입니다 ^^</h1>
+		</div>
 	</div>
 	<!-- 페이지내용 -->
 	<div class="col-md-10 mt-6">
-	
+		
 	</div>
  <!-- 			<div class="panel-group">
 		    <div class="panel panel-default">

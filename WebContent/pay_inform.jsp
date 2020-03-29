@@ -202,7 +202,7 @@
 			    	<input type="text" name="payName" class="form-control form-control-sm" id="payName" placeholder="호봉관리내역명">
 			   	 </div><br>
 				 <div class="form-row">
-			    	<label>직급/호봉 코드</label>
+			    	<label>금액</label>
 			    	<input type="number" min="0" step="100" name="payment" class="form-control form-control-sm" id="payment" placeholder="금액(원)">
 			   	 </div><br>
 			   	 
