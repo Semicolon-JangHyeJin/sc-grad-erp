@@ -114,7 +114,7 @@
 			</div>
 		</div>
 		<div class="col-md-10 mt-3">	
-			<h1>안녕하세요 semi-ERP 시스템입니다 ^^</h1>
+			<h1>안녕하세요. semi-ERP 시스템입니다. </h1>
 		</div>
 	</div>
 	<!-- 페이지내용 -->
@@ -142,7 +142,7 @@
 		
 
 	<footer class="bg-dark mt-4 p-5 text-center" style="color: #FFFFFF;">
-		Copyright &copy; 세미콜론 All Rights Reserved.
+		Copyright &copy; Semi-Colon All Rights Reserved.
 	</footer>
 	<!-- 제이쿼리 자바스크립트 추가하기 -->
 	<script src="./js/jquery.min.js"></script>
