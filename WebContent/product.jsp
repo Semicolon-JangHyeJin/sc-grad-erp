@@ -20,8 +20,8 @@
 
 <body>
 <div class="container-fluid">
-	<!-- 상단메뉴 -->
-	<div class="row">
+	<!-- 상단메뉴 영역 시작 -->
+	<div class="row" id="row1">
 		<div class="col-md-12">
 			<ul class="nav">
 				<li class="nav-item">
@@ -30,7 +30,7 @@
 				<li class="nav-item">
 					<a class="nav-link" href="#">프로필</a>
 				</li>
-				<li class="nav-item"> 
+				<li class="nav-item">
 					<a class="nav-link disabled" href="#">메세지</a>
 				</li>
 				<li class="nav-item dropdown ml-md-auto">
@@ -45,8 +45,9 @@
 			</ul>
 		</div>
 	</div>
+	<!-- 상단메뉴 영역 끝 -->
 	
-	<div class="row" style="font-size: 14px;">
+	<div class="row" style="font-size: 14px;" id="row2">
 		<!-- 좌측메뉴 -->
 		<div class="col-md-2 mt-3">	
 			<div id="card-214190">
@@ -115,45 +116,72 @@
 			</div>
 		</div>
 		<!-- 좌측메뉴 끝 -->
-		<div class="col-md-10 mt-3">	
-			<h1>안녕하세요 semi-ERP 시스템입니다 ^^</h1>
-			<a href="Xclientcode_manage.jsp">거래처코드관리</a><a>Xclientcode_manage.jsp</a><br>
-			<a href="Xfactory_manage.jsp">공장관리</a><a>Xfactory_manage.jsp</a><br>
-			<a href="Xindex.jsp">index</a><a>Xindex.jsp</a><br>
-			<a href="Xindex1.jsp">index1</a><a>Xindex1.jsp</a><br>
-			<a href="Xindex3.jsp">index3</a><a>Xindex3.jsp</a><br>
-			<a href="Xobjectcode_manage.jsp">제품코드관리</a><a>Xobjectcode_manage.jsp</a><br>
-			<a href="Xobject_manage.jsp">제품관리</a><a>Xobject_manage.jsp</a><br>
-			<a href="Xpay_inform.jsp">호봉관리</a><a>Xpay_inform.jsp</a><br>
-			<a href="Xpersonal_inform.jsp">사원관리</a><a>Xpersonal_inform.jsp</a><br>
-			<a href="Xpersonal_search.jsp">사원검색</a><a>Xpersonal_search.jsp</a><br>
-			<a href="Xsale_manage.jsp">판매관리</a><a>Xsale_manage.jsp</a><br>
-			<a href="Xunitprice_manage.jsp">판매단가관리</a><a>Xunitprice_manage.jsp</a><br>
+		<!-- 제품관리 폼 시작 -->
+		<div class="col-md-3 mt-6" style="font-size: 13px;">
+			<form>
+			<br>
+				<h2>제품 관리</h2>
+				<hr>
+			  	  <div class="form-row">
+				  	  <div class="form-group col-sm-8">
+				    	<label>제품코드</label>
+				    	<input type="number" min="0" name="productId" class="form-control form-control-sm" id="productId" placeholder="제품ID">
+				    </div>
+				    <div class="form-group col-sm-4">
+				    	<br>
+				    	<div class="checkbox">
+				    		<label>
+				      		<input type="checkbox" id="autoIncrease">자동 생성
+				    		</label>
+				  	  	</div>
+				  	</div>
+				  </div>
+				  
+				  <div class="form-row">
+				    <label>제품명</label>
+				   	<input type="text" name="productName" class="form-control form-control-sm" id="productName" placeholder="제품명">
+				  </div>
+
+				  <hr>
+				  
+				  <div class="form-row">
+				  	<div class="form-group col-sm-9"></div>
+				  	<div class="form-group col-sm-3">
+				  		<button type="submit" class="btn btn-primary btn-sm">제품 등록</button>
+				  	</div>
+				  </div>
+			</form>
 		</div>
-	</div>
-	<!-- 페이지내용 -->
-	<div class="col-md-10 mt-6">
+		<!-- 제품관리 폼 끝 -->
+		
+		<!-- 검색/열람영역 -->
+		<div class="col-md-6 mt-6" style="font-size: 13px;">
+			<!-- 검색옵션 -->
+			<form>
+			<h3>검색</h3>
+			<div class="form-row">
+				<div class="form-group col-sm-6">
+					<label>제품코드</label>
+					<input type="number" min="0" name="productId" class="form-control form-control-sm" id="productId" placeholder="제품ID">
+				</div>
+				<div class="form-group col-sm-6">
+					<label>제품명</label>
+					<input type="text" name="productName" class="form-control form-control-sm" id="productName" placeholder="제품명">
+				</div>
+			</div>
+			<div class="form-group">
+				<button type="submit" class="btn btn-primary btn-sm">검색</button>
+			</div>
+			
+			<hr>
+			</form>
+			<!-- 검색옵션끝 -->
+		</div>
+		<!-- 검색/열람영역끝 -->
 		
 	</div>
- <!-- 			<div class="panel-group">
-		    <div class="panel panel-default">
-		      <div class="panel-heading">
-		        <h4 class="panel-title">
-		          <a data-toggle="collapse" href="#collapse1">Collapsible list group</a>
-		        </h4>
-		      </div>
-		      <div id="collapse1" class="panel-collapse collapse">
-		        <ul class="list-group">
-		          <li class="list-group-item">One</li>
-		          <li class="list-group-item">Two</li>
-		          <li class="list-group-item">Three</li>
-		        </ul>
-		        <div class="panel-footer">Footer</div>
-		      </div>
-		    </div>
-		  </div>  -->
 </div>  
-		
+
 
 	<footer class="bg-dark mt-4 p-5 text-center" style="color: #FFFFFF;">
 		Copyright &copy; 세미콜론 All Rights Reserved.
