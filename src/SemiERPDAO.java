@@ -13,8 +13,8 @@ public class SemiERPDAO {
 			// Open a connection
 			System.out.println("Connecting to database...");
 			conn = DriverManager.getConnection(
-					"jdbc:mysql://localhost/semierp:3306?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC",
-					"root", "gkgk12gk");
+					"jdbc:mysql://semierp.cmccxwv3gj1s.ap-northeast-2.rds.amazonaws.com/semierp:3306?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC",
+					"admin", "semicolon");
 
 			// close a connection
 			conn.close();
