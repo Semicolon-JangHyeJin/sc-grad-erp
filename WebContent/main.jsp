@@ -115,8 +115,7 @@
 			</div>
 		</div>
 		<!-- 좌측메뉴 끝 -->
-		<div class="col-md-10 mt-3">	
-<<<<<<< HEAD
+		<div class="col-md-10 mt-3">ㄴ
 			<h1>안녕하세요 semi-ERP 시스템입니다 ^^</h1>
 			<a href="Xclientcode_manage.jsp">거래처코드관리</a><a>Xclientcode_manage.jsp</a><br>
 			<a href="Xfactory_manage.jsp">공장관리</a><a>Xfactory_manage.jsp</a><br>
@@ -130,9 +129,7 @@
 			<a href="Xpersonal_search.jsp">사원검색</a><a>Xpersonal_search.jsp</a><br>
 			<a href="Xsale_manage.jsp">판매관리</a><a>Xsale_manage.jsp</a><br>
 			<a href="Xunitprice_manage.jsp">판매단가관리</a><a>Xunitprice_manage.jsp</a><br>
-=======
 			<h1>안녕하세요. semi-ERP 시스템입니다. </h1>
->>>>>>> refs/remotes/origin/master
 		</div>
 	</div>
 	<!-- 페이지내용 -->
