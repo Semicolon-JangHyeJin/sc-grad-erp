@@ -181,7 +181,7 @@
 				  
 				  <div class="form-row">
 				  	    <label>구매금액 (구매수량x구매단가)</label>
-				    	<input type="number" name="price" class="form-control form-control-sm" id="price" placeholder="">
+				    	<input type="number" name="price" class="form-control form-control-sm" id="price" placeholder="" disabled>
 				  </div>
 				  <br>
 				  				  
