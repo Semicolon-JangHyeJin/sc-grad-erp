@@ -20,8 +20,8 @@
 
 <body>
 <div class="container-fluid">
-	<!-- 상단메뉴 -->
-	<div class="row">
+	<!-- 상단메뉴 영역 시작 -->
+	<div class="row" id="row1">
 		<div class="col-md-12">
 			<ul class="nav">
 				<li class="nav-item">
@@ -30,7 +30,7 @@
 				<li class="nav-item">
 					<a class="nav-link" href="#">프로필</a>
 				</li>
-				<li class="nav-item"> 
+				<li class="nav-item">
 					<a class="nav-link disabled" href="#">메세지</a>
 				</li>
 				<li class="nav-item dropdown ml-md-auto">
@@ -45,8 +45,9 @@
 			</ul>
 		</div>
 	</div>
+	<!-- 상단메뉴 영역 끝 -->
 	
-	<div class="row" style="font-size: 14px;">
+	<div class="row" style="font-size: 14px;" id="row2">
 		<!-- 좌측메뉴 -->
 		<div class="col-md-2 mt-3">	
 			<div id="card-214190">
@@ -115,49 +116,108 @@
 			</div>
 		</div>
 		<!-- 좌측메뉴 끝 -->
-		<div class="col-md-10 mt-3">
-			<h1>안녕하세요 semi-ERP 시스템입니다 ^^</h1>
-			<a href="Xclientcode_manage.jsp">거래처코드관리</a><a>Xclientcode_manage.jsp</a><br>
-			<a href="Xfactory_manage.jsp">공장관리</a><a>Xfactory_manage.jsp</a><br>
-			<a href="Xindex.jsp">index</a><a>Xindex.jsp</a><br>
-			<a href="Xindex1.jsp">index1</a><a>Xindex1.jsp</a><br>
-			<a href="Xindex3.jsp">index3</a><a>Xindex3.jsp</a><br>
-			<a href="Xobjectcode_manage.jsp">제품코드관리</a><a>Xobjectcode_manage.jsp</a><br>
-			<a href="Xobject_manage.jsp">제품관리</a><a>Xobject_manage.jsp</a><br>
-			<a href="Xpay_inform.jsp">호봉관리</a><a>Xpay_inform.jsp</a><br>
-			<a href="Xpersonal_inform.jsp">사원관리</a><a>Xpersonal_inform.jsp</a><br>
-			<a href="Xpersonal_search.jsp">사원검색</a><a>Xpersonal_search.jsp</a><br>
-			<a href="Xsale_manage.jsp">판매관리</a><a>Xsale_manage.jsp</a><br>
-			<a href="Xunitprice_manage.jsp">판매단가관리</a><a>Xunitprice_manage.jsp</a><br>
-			<h1>안녕하세요. semi-ERP 시스템입니다. </h1>
+		<!-- 생산관리 폼 시작 -->
+		<div class="col-md-3 mt-6" style="font-size: 13px;">
+			<form>
+			<br>
+				<h2>생산 관리</h2>
+				<hr>
+				  <div class="form-row">
+				    <div class="form-group col-sm-6">
+				    	<label>생산 제품</label>
+				    	<input type="text" name="producesearch" class="form-control form-control-sm" id="producesearch" placeholder="생산목록 검색">
+				    </div>
+				    <div class="form-group col-sm-6">
+				    	<label>　</label>
+				    	<select name="producelist" class="form-control form-control-sm" id="producelist">
+									<option value="생산1">생산1</option>
+									<option value="생산2">생산2</option>
+									<option value="생산3">생산3</option>
+						</select>
+				    </div>
+				  </div>
+				    
+				  <div class="form-row">
+				    <div class="form-group col-sm-6">
+				    	<label>생산수량</label>
+				    	<input type="number" name="amount" class="form-control form-control-sm" id="amount" placeholder="생산수량">
+				    </div>
+				    <div class="form-group col-sm-6">
+				    	<label>생산일</label>
+				    	<input type="date" name="produceDate" class="form-control form-control-sm" id="produceDate">
+				   	</div>
+				  </div>
+				  
+				  <div class="form-row">
+				    <div class="form-group col-sm-6">
+				    	<label>담당자</label>
+				    	<input type="text" name="employeesearch" class="form-control form-control-sm" id="employeesearch" placeholder="사원 검색">
+				    </div>
+				    <div class="form-group col-sm-6">
+				    	<label>　</label>
+				    	<select name="employeelist" class="form-control form-control-sm" id="employeelist">
+									<option value="사원1">사원1</option>
+									<option value="사원2">사원2</option>
+									<option value="사원3">사원3</option>
+						</select>
+				    </div>
+				  </div>
+				  
+				  <hr>
+				  <div class="form-row">
+				  	<div class="form-group col-sm-9"></div>
+				  	<div class="form-group col-sm-3">
+				  		<button type="submit" class="btn btn-primary btn-sm">생산관리 등록</button>
+				  	</div>
+				  </div>
+				  
+			</form>
 		</div>
-	</div>
-	<!-- 페이지내용 -->
-	<div class="col-md-10 mt-6">
+		<!-- 인사정보등록 폼 끝 -->
+		
+		<!-- 검색/열람영역 -->
+		<div class="col-md-6 mt-6" style="font-size: 13px;">
+			<!-- 검색옵션 -->
+			<form>
+			<h3>검색</h3>
+			<div class="form-row">
+				<div class="form-group col-sm-6">
+					<label>제품명</label>
+					<input type="text" name="producesearch" class="form-control form-control-sm" id="producesearch" placeholder="생산목록 검색">   
+				</div>
+				<div class="form-group col-sm-6">
+					<label>담당자</label>
+					<input type="text" name="employeesearch" class="form-control form-control-sm" id="employeesearch" placeholder="사원 검색">
+				</div>
+			</div>
+			<label>생산일</label>
+			<div class="form-row">
+				<div class="form-group col-sm-5">
+					<input type="date" name="produceDate" class="form-control form-control-sm" id="produceDate">
+				</div>	
+				<div class="form-group col-sm-2" style="text-align:center">
+					<p>~</p>
+				</div>		
+				<div class="form-group col-sm-5">
+					<input type="date" name="produceDate" class="form-control form-control-sm" id="produceDate">
+				</div>			
+			</div>
+			<div class="form-group">
+				<button type="submit" class="btn btn-primary btn-sm">검색</button>
+			</div>
+			
+			<hr>
+			</form>
+			<!-- 검색옵션끝 -->
+		</div>
+		<!-- 검색/열람영역끝 -->
 		
 	</div>
- <!-- 			<div class="panel-group">
-		    <div class="panel panel-default">
-		      <div class="panel-heading">
-		        <h4 class="panel-title">
-		          <a data-toggle="collapse" href="#collapse1">Collapsible list group</a>
-		        </h4>
-		      </div>
-		      <div id="collapse1" class="panel-collapse collapse">
-		        <ul class="list-group">
-		          <li class="list-group-item">One</li>
-		          <li class="list-group-item">Two</li>
-		          <li class="list-group-item">Three</li>
-		        </ul>
-		        <div class="panel-footer">Footer</div>
-		      </div>
-		    </div>
-		  </div>  -->
 </div>  
-		
+
 
 	<footer class="bg-dark mt-4 p-5 text-center" style="color: #FFFFFF;">
-		Copyright &copy; Semi-Colon All Rights Reserved.
+		Copyright &copy; 세미콜론 All Rights Reserved.
 	</footer>
 	<!-- 제이쿼리 자바스크립트 추가하기 -->
 	<script src="./js/jquery.min.js"></script>
