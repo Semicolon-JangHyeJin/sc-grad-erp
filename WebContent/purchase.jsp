@@ -175,7 +175,7 @@
 				    </div>
 				    <div class="form-group col-sm-6">
 				    	<label>구매단가</label>
-				    	<input type="number" name="unitprice" class="form-control form-control-sm" id="unitprice" placeholder="구매단가">
+				    	<input type="number" name="unitprice" class="form-control form-control-sm" id="unitprice" placeholder="구매단가" disabled>
 				   	</div>
 				  </div>
 				  
