@@ -118,7 +118,7 @@
 		<!-- 좌측메뉴 끝 -->
 		<!-- 제품관리 폼 시작 -->
 		<div class="col-md-3 mt-6" style="font-size: 13px;">
-			<form>
+			<form method='post'>
 			<br>
 				<h2>제품 관리</h2>
 				<hr>

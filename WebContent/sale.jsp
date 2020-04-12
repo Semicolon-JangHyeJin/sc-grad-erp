@@ -118,7 +118,7 @@
 		<!-- 좌측메뉴 끝 -->
 		<!-- 구매관리 폼 시작 -->
 		<div class="col-md-3 mt-6" style="font-size: 13px;">
-			<form>
+			<form method='post'>
 			<br>
 				<h2>판매 관리</h2>
 				<hr>
@@ -226,7 +226,7 @@
 				  
 			</form>
 		</div>
-		<!-- 인사정보등록 폼 끝 -->
+		<!-- 판매관리 폼 끝 -->
 		
 		<!-- 검색/열람영역 -->
 		<div class="col-md-6 mt-6" style="font-size: 13px;">

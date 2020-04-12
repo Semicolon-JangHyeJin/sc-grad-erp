@@ -118,7 +118,7 @@
 		<!-- 좌측메뉴 끝 -->
 		<!-- 생산관리 폼 시작 -->
 		<div class="col-md-3 mt-6" style="font-size: 13px;">
-			<form>
+			<form method='post'>
 			<br>
 				<h2>생산 관리</h2>
 				<hr>
@@ -157,7 +157,7 @@
 				    	<label>　</label>
 				    	<select name="employeelist" class="form-control form-control-sm" id="employeelist">
 									<option value="사원1">사원1</option>
-									<option value="사원2">사원2</option>
+				 					<option value="사원2">사원2</option>
 									<option value="사원3">사원3</option>
 						</select>
 				    </div>
@@ -173,7 +173,7 @@
 				  
 			</form>
 		</div>
-		<!-- 인사정보등록 폼 끝 -->
+		<!-- 생산관리 폼 끝 -->
 		
 		<!-- 검색/열람영역 -->
 		<div class="col-md-6 mt-6" style="font-size: 13px;">

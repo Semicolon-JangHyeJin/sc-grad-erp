@@ -118,7 +118,7 @@
 		<!-- 좌측메뉴 끝 -->
 		<!-- 사원관리 폼 시작 -->
 		<div class="col-md-3 mt-6" style="font-size: 13px;">
-			<form>
+			<form method='post'>
 			<br>
 				<h2>사원 관리</h2>
 				<hr>
@@ -206,7 +206,7 @@
 				  
 			</form>
 		</div>
-		<!-- 인사정보등록 폼 끝 -->
+		<!-- 사원관리 폼 끝 -->
 		
 		<!-- 검색/열람영역 -->
 		<div class="col-md-6 mt-6" style="font-size: 13px;">
