@@ -1,5 +1,5 @@
 public class SaleDTO {
-	private String ALE_CODE;
+	private String SALE_CODE;
 	private String VENDOR_BID;
 	private String PRODUCT_ID;
 	private int S_AMOUNT;
@@ -10,11 +10,11 @@ public class SaleDTO {
 	private String SALE_EID;
 
 	public String getALE_CODE() {
-		return ALE_CODE;
+		return SALE_CODE;
 	}
 
-	public void setALE_CODE(String aLE_CODE) {
-		ALE_CODE = aLE_CODE;
+	public void setALE_CODE(String sALE_CODE) {
+		SALE_CODE = sALE_CODE;
 	}
 
 	public String getVENDOR_BID() {
@@ -86,10 +86,10 @@ public class SaleDTO {
 		// TODO Auto-generated constructor stub
 	}
 
-	public SaleDTO(String aLE_CODE, String vENDOR_BID, String pRODUCT_ID, int s_AMOUNT, int s_UNIT_PRICE, int s_PRICE,
+	public SaleDTO(String sALE_CODE, String vENDOR_BID, String pRODUCT_ID, int s_AMOUNT, int s_UNIT_PRICE, int s_PRICE,
 			String dEAL_ITEM_ID, String d_DATE, String sALE_EID) {
 		super();
-		ALE_CODE = aLE_CODE;
+		SALE_CODE = sALE_CODE;
 		VENDOR_BID = vENDOR_BID;
 		PRODUCT_ID = pRODUCT_ID;
 		S_AMOUNT = s_AMOUNT;
@@ -102,7 +102,7 @@ public class SaleDTO {
 
 	@Override
 	public String toString() {
-		return "SaleDTO [ALE_CODE=" + ALE_CODE + ", VENDOR_BID=" + VENDOR_BID + ", PRODUCT_ID=" + PRODUCT_ID
+		return "SaleDTO [SALE_CODE=" + SALE_CODE + ", VENDOR_BID=" + VENDOR_BID + ", PRODUCT_ID=" + PRODUCT_ID
 				+ ", S_AMOUNT=" + S_AMOUNT + ", S_UNIT_PRICE=" + S_UNIT_PRICE + ", S_PRICE=" + S_PRICE
 				+ ", DEAL_ITEM_ID=" + DEAL_ITEM_ID + ", D_DATE=" + D_DATE + ", SALE_EID=" + SALE_EID + "]";
 	}
