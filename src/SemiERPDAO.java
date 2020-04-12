@@ -1,4 +1,5 @@
 import java.sql.*;
+import java.util.ArrayList;
 
 public class SemiERPDAO {
 	private Connection conn;
@@ -175,10 +176,11 @@ public class SemiERPDAO {
 		}
 	}
 
-	public void InsertMaterialsData(String mATERIALS_ID, String mATERIALS_NAME, int aMOUNT) {		
+	public void InsertMaterialsData(String mATERIALS_ID, String mATERIALS_NAME, int aMOUNT) {
 		try {
 			conn = dbConn();
-			pstmt = conn.prepareStatement("INSERT INTO MATERIALS(MATERIALS_ID, MATERIALS_NAME, AMOUNT) VALUES (?, ?, ?)");
+			pstmt = conn
+					.prepareStatement("INSERT INTO MATERIALS(MATERIALS_ID, MATERIALS_NAME, AMOUNT) VALUES (?, ?, ?)");
 			pstmt.setString(1, mATERIALS_ID);
 			pstmt.setString(2, mATERIALS_NAME);
 			pstmt.setInt(3, aMOUNT);
@@ -192,7 +194,8 @@ public class SemiERPDAO {
 	public void InsertProductData(String pRODUCT_ID, String pRODUCT_NAME, int aMOUNT, String mATERIALS_ID) {
 		try {
 			conn = dbConn();
-			pstmt = conn.prepareStatement("INSERT INTO PRODUCT(PRODUCT_ID, PRODUCT_NAME, AMOUNT, MATERIALS_ID) VALUES (?, ?, ?, ?)");
+			pstmt = conn.prepareStatement(
+					"INSERT INTO PRODUCT(PRODUCT_ID, PRODUCT_NAME, AMOUNT, MATERIALS_ID) VALUES (?, ?, ?, ?)");
 			pstmt.setString(1, pRODUCT_ID);
 			pstmt.setString(2, pRODUCT_NAME);
 			pstmt.setInt(3, aMOUNT);
@@ -204,10 +207,12 @@ public class SemiERPDAO {
 		}
 	}
 
-	public void InserAccountListtData(String aCCOUNT_BID, String bUSINESS_NAME, String cEO, String aDDRESS, String eMAIL, int pHONE_NUMBER) {
+	public void InserAccountListtData(String aCCOUNT_BID, String bUSINESS_NAME, String cEO, String aDDRESS,
+			String eMAIL, int pHONE_NUMBER) {
 		try {
 			conn = dbConn();
-			pstmt = conn.prepareStatement("INSERT INTO ACCOUNT_LIST(ACCOUNT_BID, BUSINESS_NAME, CEO, ADDRESS, EMAIL, PHONE_NUMBER) VALUES (?, ?, ?, ?, ?, ?)");
+			pstmt = conn.prepareStatement(
+					"INSERT INTO ACCOUNT_LIST(ACCOUNT_BID, BUSINESS_NAME, CEO, ADDRESS, EMAIL, PHONE_NUMBER) VALUES (?, ?, ?, ?, ?, ?)");
 			pstmt.setString(1, aCCOUNT_BID);
 			pstmt.setString(2, bUSINESS_NAME);
 			pstmt.setString(3, cEO);
@@ -221,10 +226,12 @@ public class SemiERPDAO {
 		}
 	}
 
-	public void InsertEmployeeData(String eID, String e_NAME, int e_PASSWORD, String dEPARTMENT, String e_POSITION, String pHONE_NUMBER, int sALARY, String jOIN_DATE) {
+	public void InsertEmployeeData(String eID, String e_NAME, int e_PASSWORD, String dEPARTMENT, String e_POSITION,
+			String pHONE_NUMBER, int sALARY, String jOIN_DATE) {
 		try {
 			conn = dbConn();
-			pstmt = conn.prepareStatement("INSERT INTO EMPLOYEE(EID, E_NAME, E_PASSWORD, DEPARTMENT, E_POSITION, PHONE_NUMBER, SALARY, JOIN_DATE) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+			pstmt = conn.prepareStatement(
+					"INSERT INTO EMPLOYEE(EID, E_NAME, E_PASSWORD, DEPARTMENT, E_POSITION, PHONE_NUMBER, SALARY, JOIN_DATE) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
 			pstmt.setString(1, eID);
 			pstmt.setString(2, e_NAME);
 			pstmt.setInt(3, e_PASSWORD);
@@ -240,10 +247,12 @@ public class SemiERPDAO {
 		}
 	}
 
-	public void InsertPurchaseData(String pURCHASE_CODE, String mATERIALS_ID, String sELLER_BID, int p_AMOUNT, int p_UNIT_PRICE, int p_PRICE, String dEAL_ITEM_ID, String d_DATE, String pURCHASE_EID) {
+	public void InsertPurchaseData(String pURCHASE_CODE, String mATERIALS_ID, String sELLER_BID, int p_AMOUNT,
+			int p_UNIT_PRICE, int p_PRICE, String dEAL_ITEM_ID, String d_DATE, String pURCHASE_EID) {
 		try {
 			conn = dbConn();
-			pstmt = conn.prepareStatement("INSERT INTO PURCHASE(PURCHASE_CODE, MATERIALS_ID, SELLER_BID, P_AMOUNT, P_UNIT_PRICE, P_PRICE, DEAL_ITEM_ID, D_DATE, PURCHASE_EID) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+			pstmt = conn.prepareStatement(
+					"INSERT INTO PURCHASE(PURCHASE_CODE, MATERIALS_ID, SELLER_BID, P_AMOUNT, P_UNIT_PRICE, P_PRICE, DEAL_ITEM_ID, D_DATE, PURCHASE_EID) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
 			pstmt.setString(1, pURCHASE_CODE);
 			pstmt.setString(2, mATERIALS_ID);
 			pstmt.setString(3, sELLER_BID);
@@ -260,10 +269,12 @@ public class SemiERPDAO {
 		}
 	}
 
-	public void InsertSaleData(String sALE_CODE, String vENDOR_BID, String pRODUCT_ID, int s_AMOUNT, int s_UNIT_PRICE, int s_PRICE, String dEAL_ITEM_ID, String d_DATE, String sALE_EID) {
+	public void InsertSaleData(String sALE_CODE, String vENDOR_BID, String pRODUCT_ID, int s_AMOUNT, int s_UNIT_PRICE,
+			int s_PRICE, String dEAL_ITEM_ID, String d_DATE, String sALE_EID) {
 		try {
 			conn = dbConn();
-			pstmt = conn.prepareStatement("INSERT INTO SALE(SALE, VENDOR_BID, PRODUCT_ID, S_AMOUNT, S_NUIT_PRICE, S_PRICE, DEAL_ITEM_ID, D_DATE, SALE_EDI) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+			pstmt = conn.prepareStatement(
+					"INSERT INTO SALE(SALE, VENDOR_BID, PRODUCT_ID, S_AMOUNT, S_NUIT_PRICE, S_PRICE, DEAL_ITEM_ID, D_DATE, SALE_EDI) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
 			pstmt.setString(1, sALE_CODE);
 			pstmt.setString(2, vENDOR_BID);
 			pstmt.setString(3, pRODUCT_ID);
@@ -280,10 +291,13 @@ public class SemiERPDAO {
 		}
 	}
 
-	public void InsertProductionData(String pRODUCTION_CODE, String pRODUCT_ID, String pRODUCT_NAME, int p_AMOUNT, String mATERIALS_ID, String mATERIALS_NAME, int m_AMOUNT, int p_PRICE, String p_DATE, String pRODUCTION_EID) {
+	public void InsertProductionData(String pRODUCTION_CODE, String pRODUCT_ID, String pRODUCT_NAME, int p_AMOUNT,
+			String mATERIALS_ID, String mATERIALS_NAME, int m_AMOUNT, int p_PRICE, String p_DATE,
+			String pRODUCTION_EID) {
 		try {
 			conn = dbConn();
-			pstmt = conn.prepareStatement("INSERT INTO PRODUCTION(PRODUCTION_CODE, PRODUCT_ID, PRODUCT_NAME, P_AMOUNT, MATERIALS_ID, MATERIALS_NAME, M_AMOUNT, P_PRICE, P_DATE, PRODUCTION_EID) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+			pstmt = conn.prepareStatement(
+					"INSERT INTO PRODUCTION(PRODUCTION_CODE, PRODUCT_ID, PRODUCT_NAME, P_AMOUNT, MATERIALS_ID, MATERIALS_NAME, M_AMOUNT, P_PRICE, P_DATE, PRODUCTION_EID) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 			pstmt.setString(1, pRODUCTION_CODE);
 			pstmt.setString(2, pRODUCT_ID);
 			pstmt.setString(3, pRODUCT_NAME);
@@ -301,10 +315,13 @@ public class SemiERPDAO {
 		}
 	}
 
-	public void InsertInventoryReceiptsData(String d_DATE, int p_AMOUNT, int p_UNIT_PRICE, int p_PRICE, int s_AMOUNT, int s_UNIT_PRICE, int s_PRICE, int sTOCK_AMOUNT, int sTOCK_UNIT_PRICE, int sTOCK_PRICE, String dESCRIPTION) {
+	public void InsertInventoryReceiptsData(String d_DATE, int p_AMOUNT, int p_UNIT_PRICE, int p_PRICE, int s_AMOUNT,
+			int s_UNIT_PRICE, int s_PRICE, int sTOCK_AMOUNT, int sTOCK_UNIT_PRICE, int sTOCK_PRICE,
+			String dESCRIPTION) {
 		try {
 			conn = dbConn();
-			pstmt = conn.prepareStatement("INSERT INTO INVENTORY_RECEIPTS(D_DATE, P_AMOUNT, P_UNIT_PRICE, P_PRICE, S_AMOUNT, S_UNIT_PRICE, S_PRICE, STOCK_AMOUNT, STOCK_UNIT_PRICE, STOCK_PRICE, DESCRIPITION) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+			pstmt = conn.prepareStatement(
+					"INSERT INTO INVENTORY_RECEIPTS(D_DATE, P_AMOUNT, P_UNIT_PRICE, P_PRICE, S_AMOUNT, S_UNIT_PRICE, S_PRICE, STOCK_AMOUNT, STOCK_UNIT_PRICE, STOCK_PRICE, DESCRIPITION) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 			pstmt.setString(1, d_DATE);
 			pstmt.setInt(2, p_AMOUNT);
 			pstmt.setInt(3, p_UNIT_PRICE);
@@ -321,5 +338,257 @@ public class SemiERPDAO {
 			// TODO: handle exception
 			e.printStackTrace();
 		}
+	}
+
+	public ArrayList<MaterialsDTO> MaterialsList() {
+		ArrayList<MaterialsDTO> list = new ArrayList<MaterialsDTO>();
+		ResultSet rs = null;
+
+		try {
+			conn = dbConn();
+			String sql = "SELECT * FROM MATERIALS";
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+
+			while (rs.next()) {
+				MaterialsDTO dto = new MaterialsDTO();
+
+				dto.setMATERIALS_ID(rs.getString("MATERIALS_ID"));
+				dto.setMATERIALS_NAME(rs.getString("MATERIALS_NAME"));
+				dto.setAMOUNT(rs.getInt("AMOUNT"));
+
+				list.add(dto);
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+
+		return list;
+	}
+
+	public ArrayList<ProductDTO> ProductList() {
+		ArrayList<ProductDTO> list = new ArrayList<ProductDTO>();
+		ResultSet rs = null;
+
+		try {
+			conn = dbConn();
+			String sql = "SELECT * FROM PRODUCT";
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+
+			while (rs.next()) {
+				ProductDTO dto = new ProductDTO();
+
+				dto.setPRODUCT_ID(rs.getString("PRODUCT_ID"));
+				dto.setPRODUCT_NAME(rs.getString("PRODUCT_NAME"));
+				dto.setAMOUNT(rs.getInt("AMOUNT"));
+				dto.setMATERIALS_ID(rs.getString("MATERIALS_ID"));
+
+				list.add(dto);
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+
+		return list;
+	}
+
+	public ArrayList<AccountListDTO> AccountListList() {
+		ArrayList<AccountListDTO> list = new ArrayList<AccountListDTO>();
+		ResultSet rs = null;
+
+		try {
+			conn = dbConn();
+			String sql = "SELECT * FROM ACCOUNT_LIST";
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+
+			while (rs.next()) {
+				AccountListDTO dto = new AccountListDTO();
+
+				dto.setACCOUNT_BID(rs.getString("ACCOUNT_BID"));
+				dto.setBUSINESS_NAME(rs.getString("BUSINESS_NAME"));
+				dto.setCEO(rs.getString("CEO"));
+				dto.setADDRESS(rs.getString("ADDRESS"));
+				dto.setEMAIL(rs.getString("EMAIL"));
+				dto.setPHONE_NUMBER(rs.getInt("PHONE_NUMBER"));
+
+				list.add(dto);
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+
+		return list;
+	}
+
+	public ArrayList<EmployeeDTO> EmployeeList() {
+		ArrayList<EmployeeDTO> list = new ArrayList<EmployeeDTO>();
+		ResultSet rs = null;
+
+		try {
+			conn = dbConn();
+			String sql = "SELECT * FROM EMPLOYEE";
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+
+			while (rs.next()) {
+				EmployeeDTO dto = new EmployeeDTO();
+
+				dto.setEID(rs.getString("EID"));
+				dto.setE_NAME(rs.getString("E_NAME"));
+				dto.setE_PASSWORD(rs.getInt("E_PASSWORD"));
+				dto.setDEPARTMENT(rs.getString("DEPARTMENT"));
+				dto.setE_POSITION(rs.getString("E_POSITION"));
+				dto.setPHONE_NUMBER(rs.getString("PHONE_NUMBER"));
+				dto.setSALARY(rs.getInt("SALARY"));
+				dto.setJOIN_DATE(rs.getString("JOIN_DATE"));
+
+				list.add(dto);
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+
+		return list;
+	}
+
+	public ArrayList<PurchaseDTO> PurchaseList() {
+		ArrayList<PurchaseDTO> list = new ArrayList<PurchaseDTO>();
+		ResultSet rs = null;
+
+		try {
+			conn = dbConn();
+			String sql = "SELECT * FROM PURCHASE";
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+
+			while (rs.next()) {
+				PurchaseDTO dto = new PurchaseDTO();
+
+				dto.setPURCHASE_CODE(rs.getString("PURCHASE_CODE"));
+				dto.setMATERIALS_ID(rs.getString("MATERIALS_ID"));
+				dto.setSELLER_BID(rs.getString("SELLER_BID"));
+				dto.setP_AMOUNT(rs.getInt("P_AMOUNT"));
+				dto.setP_UNIT_PRICE(rs.getInt("P_UNIT_PRICE"));
+				dto.setP_PRICE(rs.getInt("P_PRICE"));
+				dto.setDEAL_ITEM_ID(rs.getString("DEAL_ITEM_ID"));
+				dto.setD_DATE(rs.getString("D_DATE"));
+				dto.setPURCHASE_EID(rs.getString("PURCHASE_EID"));
+
+				list.add(dto);
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+
+		return list;
+	}
+
+	public ArrayList<SaleDTO> SaleList() {
+		ArrayList<SaleDTO> list = new ArrayList<SaleDTO>();
+		ResultSet rs = null;
+
+		try {
+			conn = dbConn();
+			String sql = "SELECT * FROM SALE";
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+
+			while (rs.next()) {
+				SaleDTO dto = new SaleDTO();
+
+				dto.setSALE_CODE(rs.getString("SALE_CODE"));
+				dto.setVENDOR_BID(rs.getString("VENDOR_BID"));
+				dto.setPRODUCT_ID(rs.getString("PRODUCT_ID"));
+				dto.setS_AMOUNT(rs.getInt("S_AMOUNT"));
+				dto.setS_UNIT_PRICE(rs.getInt("S_UNIT_PRICE"));
+				dto.setS_PRICE(rs.getInt("S_PRICE"));
+				dto.setDEAL_ITEM_ID(rs.getString("DEAL_ITEM_ID"));
+				dto.setD_DATE(rs.getString("D_DATE"));
+				dto.setSALE_EID(rs.getString("SALE_EID"));
+
+				list.add(dto);
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+
+		return list;
+	}
+
+	public ArrayList<ProductionDTO> ProductionList() {
+		ArrayList<ProductionDTO> list = new ArrayList<ProductionDTO>();
+		ResultSet rs = null;
+
+		try {
+			conn = dbConn();
+			String sql = "SELECT * FROM PRODUCTION";
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+
+			while (rs.next()) {
+				ProductionDTO dto = new ProductionDTO();
+
+				dto.setPRODUCTION_CODE(rs.getString("PRODUCTION_DOCE"));
+				dto.setPRODUCT_ID(rs.getString("PRODUCT_ID"));
+				dto.setPRODUCT_NAME(rs.getString("PRODUT_NAME"));
+				dto.setP_AMOUNT(rs.getInt("P_AMOUNT"));
+				dto.setMATERIALS_ID(rs.getString("MATERIALS_ID"));
+				dto.setMATERIALS_NAME(rs.getString("MATERIALS_NAME"));
+				dto.setM_AMOUNT(rs.getInt("M_AMOUNT"));
+				dto.setP_PRICE(rs.getInt("P_PRICE"));
+				dto.setP_DATE(rs.getString("P_DATE"));
+				dto.setPRODUCTION_EID(rs.getString("PRODUCTION_EID"));
+
+				list.add(dto);
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+
+		return list;
+	}
+
+	public ArrayList<InventoryReceiptsDTO> InventoryReceiptsList() {
+		ArrayList<InventoryReceiptsDTO> list = new ArrayList<InventoryReceiptsDTO>();
+		ResultSet rs = null;
+
+		try {
+			conn = dbConn();
+			String sql = "SELECT * FROM INVENTORY_RECEIPTS";
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+
+			while (rs.next()) {
+				InventoryReceiptsDTO dto = new InventoryReceiptsDTO();
+
+				dto.setD_DATE(rs.getString("D_DATE"));
+				dto.setP_AMOUNT(rs.getInt("P_AMOUNT"));
+				dto.setP_UNIT_PRICE(rs.getInt("P_UNIT_PRICE"));
+				dto.setP_PRICE(rs.getInt("P_PRICE"));
+				dto.setS_AMOUNT(rs.getInt("S_AMOUNT"));
+				dto.setS_UNIT_PRICE(rs.getInt("S_UNIT_PRICE"));
+				dto.setS_PRICE(rs.getInt("S_PRICE"));
+				dto.setSTOCK_AMOUNT(rs.getInt("STOCK_AMOUNT"));
+				dto.setSTOCK_UNIT_PRICE(rs.getInt("STOCK_UNIT_PRICE"));
+				dto.setSTOCK_PRICE(rs.getInt("STOCK_PRICE"));
+				dto.setDESCRIPTION(rs.getString("DESCRIPTION"));
+
+				list.add(dto);
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+
+		return list;
 	}
 }

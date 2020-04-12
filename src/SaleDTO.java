@@ -9,11 +9,11 @@ public class SaleDTO {
 	private String D_DATE;
 	private String SALE_EID;
 
-	public String getALE_CODE() {
+	public String getSALE_CODE() {
 		return SALE_CODE;
 	}
 
-	public void setALE_CODE(String sALE_CODE) {
+	public void setSALE_CODE(String sALE_CODE) {
 		SALE_CODE = sALE_CODE;
 	}
 
