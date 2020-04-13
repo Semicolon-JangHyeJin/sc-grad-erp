@@ -1,3 +1,4 @@
+package com.db;
 public class MaterialsDTO {
 	private String MATERIALS_ID;
 	private String MATERIALS_NAME;

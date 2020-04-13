@@ -1,3 +1,4 @@
+package com.db;
 public class PurchaseDTO {
 	private String PURCHASE_CODE;
 	private String MATERIALS_ID;

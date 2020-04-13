@@ -1,3 +1,4 @@
+package com.db;
 public class ProductDTO {
 	private String PRODUCT_ID;
 	private String PRODUCT_NAME;
