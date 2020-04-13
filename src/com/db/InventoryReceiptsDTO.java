@@ -1,3 +1,4 @@
+package com.db;
 public class InventoryReceiptsDTO {
 	private String D_DATE;
 	private int P_AMOUNT;

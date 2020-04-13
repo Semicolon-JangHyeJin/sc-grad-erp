@@ -1,3 +1,4 @@
+package com.db;
 public class EmployeeDTO {
 	private String EID;
 	private String E_NAME;

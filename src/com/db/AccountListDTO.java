@@ -1,3 +1,4 @@
+package com.db;
 public class AccountListDTO {
 	private String ACCOUNT_BID;
 	private String BUSINESS_NAME;

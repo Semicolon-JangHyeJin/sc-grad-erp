@@ -1,3 +1,4 @@
+package com.db;
 public class SaleDTO {
 	private String SALE_CODE;
 	private String VENDOR_BID;

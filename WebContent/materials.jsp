@@ -1,5 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@page import="com.db.*" %>
+<%@page import="java.sql.*" %>
+<%
+	request.setCharacterEncoding("utf-8");
+	//String id = request.getParameter("materialId");
+	//String name = request.getParameter("materialName");
+	//String p=request.getParameter("price");
+	//int price = Integer.parseInt(p);
+	
+	SemiERPDAO s = new SemiERPDAO();
+	s.dbConn();
+	s.InsertMaterialsData("123", "name", 123000);
+%>    
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -98,8 +112,7 @@
 						</div>
 					</div>
 				</div>
-				
-				<div class="card">
+								<div class="card">
 					<div class="card-header">
 						 <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-214190" href="#card-element-4">회사관리</a>
 					</div>

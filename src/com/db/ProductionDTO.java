@@ -1,3 +1,4 @@
+package com.db;
 public class ProductionDTO {
 	private String PRODUCTION_CODE;
 	private String PRODUCT_ID;
