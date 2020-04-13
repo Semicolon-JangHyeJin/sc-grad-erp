@@ -25,13 +25,11 @@
 	 	//div.innerHTML = "<input type=\"file\" name=\"upload[" + i + "]\" title=\"파일추가\">";
 	 	div.innerHTML ="<div class=\"form-row\">"+
 	 					"<div class=\"form-group col-sm-4\">"+
-	 					"<label>자재</label>"+
 	 					"<input type=\"text\" name=\"materialsearch\" class=\"form-control form-control-sm\" id=\"materialsearch\" placeholder=\"자재 검색\">"+
-	 					"</div><div class=\"form-group col-sm-4\"><label>　</label>"+
+	 					"</div><div class=\"form-group col-sm-4\">"+
 	 					"<select name=\"materiallist\" class=\"form-control form-control-sm\" id=\"materiallist\">"+
 	 					"<option value=\"자재1\">자재1</option><option value=\"자재2\">자재2</option><option value=\"자재3\">자재3</option></select></div>"+
 	 					"<div class=\"form-group col-sm-4\">"+
-				    	"<label>수량</label>"+
 				    	"<input type=\"number\" min=1 name=\"amount\" class=\"form-control form-control-sm\" id=\"amount\" placeholder=\"자재 수량\">"+
 				        "</div>"+
 	 					"</div>"
