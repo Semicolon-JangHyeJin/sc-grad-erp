@@ -30,7 +30,7 @@ public class SemiERPDAO {
 	}
 
 	// 데이터베이스가 있는지 확인하고, 없으면 데이터베이스 생성 후 데이터베이스 전환
-	// CreateOrChanegDAtabase("semiERP");
+	// CreateOrChanegDatabase("semiERP");
 	public void CreateOrChangeDatabase(String dbName) {
 		try {
 			String dbSql = "SELECT * FROM Information_schema.SCHEMATA WHERE SCHEMA_NAME = ?";
