@@ -1,10 +1,11 @@
 package com.db;
-public class ProductDTO {
+public class ProductDTO implements Comparable<ProductDTO>{
 	private String PRODUCT_ID;
 	private String PRODUCT_NAME;
-	private int AMOUNT;
-	private String MATERIALS_ID;
 
+	public int getID() {
+		return Integer.parseInt(PRODUCT_ID);
+	}
 	public String getPRODUCT_ID() {
 		return PRODUCT_ID;
 	}
@@ -21,38 +22,29 @@ public class ProductDTO {
 		PRODUCT_NAME = pRODUCT_NAME;
 	}
 
-	public int getAMOUNT() {
-		return AMOUNT;
-	}
-
-	public void setAMOUNT(int aMOUNT) {
-		AMOUNT = aMOUNT;
-	}
-
-	public String getMATERIALS_ID() {
-		return MATERIALS_ID;
-	}
-
-	public void setMATERIALS_ID(String mATERIALS_ID) {
-		MATERIALS_ID = mATERIALS_ID;
-	}
-
 	public ProductDTO() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public ProductDTO(String pRODUCT_ID, String pRODUCT_NAME, int aMOUNT, String mATERIALS_ID) {
+	public ProductDTO(String pRODUCT_ID, String pRODUCT_NAME) {
 		super();
 		PRODUCT_ID = pRODUCT_ID;
 		PRODUCT_NAME = pRODUCT_NAME;
-		AMOUNT = aMOUNT;
-		MATERIALS_ID = mATERIALS_ID;
 	}
 
 	@Override
 	public String toString() {
-		return "ProductDTO [PRODUCT_ID=" + PRODUCT_ID + ", PRODUCT_NAME=" + PRODUCT_NAME + ", AMOUNT=" + AMOUNT
-				+ ", MATERIALS_ID=" + MATERIALS_ID + "]";
+		return "ProductDTO [PRODUCT_ID=" + PRODUCT_ID + ", PRODUCT_NAME=" + PRODUCT_NAME + "]";
+	}
+
+	@Override
+	public int compareTo(ProductDTO o) {
+		if (Integer.parseInt(this.PRODUCT_ID) < o.getID()) {
+            return -1;
+        } else if (Integer.parseInt(this.PRODUCT_ID) > o.getID()) {
+            return 1;
+        }
+        return 0;
 	}
 }

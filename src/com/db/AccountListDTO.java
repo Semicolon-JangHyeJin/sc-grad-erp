@@ -1,12 +1,14 @@
 package com.db;
-public class AccountListDTO {
+public class AccountListDTO implements Comparable<AccountListDTO>{
 	private String ACCOUNT_BID;
 	private String BUSINESS_NAME;
-	private String CEO;
 	private String ADDRESS;
 	private String EMAIL;
-	private int PHONE_NUMBER;
-
+	private String PHONE_NUMBER;
+	
+	public int getID() {
+		return Integer.parseInt(ACCOUNT_BID);
+	}
 	public String getACCOUNT_BID() {
 		return ACCOUNT_BID;
 	}
@@ -21,14 +23,6 @@ public class AccountListDTO {
 
 	public void setBUSINESS_NAME(String bUSINESS_NAME) {
 		BUSINESS_NAME = bUSINESS_NAME;
-	}
-
-	public String getCEO() {
-		return CEO;
-	}
-
-	public void setCEO(String cEO) {
-		CEO = cEO;
 	}
 
 	public String getADDRESS() {
@@ -47,11 +41,11 @@ public class AccountListDTO {
 		EMAIL = eMAIL;
 	}
 
-	public int getPHONE_NUMBER() {
+	public String getPHONE_NUMBER() {
 		return PHONE_NUMBER;
 	}
 
-	public void setPHONE_NUMBER(int pHONE_NUMBER) {
+	public void setPHONE_NUMBER(String pHONE_NUMBER) {
 		PHONE_NUMBER = pHONE_NUMBER;
 	}
 
@@ -60,12 +54,11 @@ public class AccountListDTO {
 		// TODO Auto-generated constructor stub
 	}
 
-	public AccountListDTO(String aCCOUNT_BID, String bUSINESS_NAME, String cEO, String aDDRESS, String eMAIL,
-			int pHONE_NUMBER) {
+	public AccountListDTO(String aCCOUNT_BID, String bUSINESS_NAME, String aDDRESS, String eMAIL,
+			String pHONE_NUMBER) {
 		super();
 		ACCOUNT_BID = aCCOUNT_BID;
 		BUSINESS_NAME = bUSINESS_NAME;
-		CEO = cEO;
 		ADDRESS = aDDRESS;
 		EMAIL = eMAIL;
 		PHONE_NUMBER = pHONE_NUMBER;
@@ -73,7 +66,17 @@ public class AccountListDTO {
 
 	@Override
 	public String toString() {
-		return "AccountListDTO [ACCOUNT_BID=" + ACCOUNT_BID + ", BUSINESS_NAME=" + BUSINESS_NAME + ", CEO=" + CEO
+		return "AccountListDTO [ACCOUNT_BID=" + ACCOUNT_BID + ", BUSINESS_NAME=" + BUSINESS_NAME
 				+ ", ADDRESS=" + ADDRESS + ", EMAIL=" + EMAIL + ", PHONE_NUMBER=" + PHONE_NUMBER + "]";
+	}
+
+	@Override
+	public int compareTo(AccountListDTO o) {
+		if (Integer.parseInt(this.ACCOUNT_BID) < o.getID()) {
+            return -1;
+        } else if (Integer.parseInt(this.ACCOUNT_BID) > o.getID()) {
+            return 1;
+        }
+        return 0;
 	}
 }

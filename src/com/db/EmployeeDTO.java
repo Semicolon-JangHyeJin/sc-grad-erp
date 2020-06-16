@@ -1,14 +1,17 @@
 package com.db;
-public class EmployeeDTO {
+public class EmployeeDTO implements Comparable<EmployeeDTO> {
 	private String EID;
 	private String E_NAME;
-	private int E_PASSWORD;
+	private String E_PASSWORD;
 	private String DEPARTMENT;
 	private String E_POSITION;
 	private String PHONE_NUMBER;
 	private int SALARY;
 	private String JOIN_DATE;
 
+	public int getID() {
+		return Integer.parseInt(EID);
+	}
 	public String getEID() {
 		return EID;
 	}
@@ -25,11 +28,11 @@ public class EmployeeDTO {
 		E_NAME = e_NAME;
 	}
 
-	public int getE_PASSWORD() {
+	public String getE_PASSWORD() {
 		return E_PASSWORD;
 	}
 
-	public void setE_PASSWORD(int e_PASSWORD) {
+	public void setE_PASSWORD(String e_PASSWORD) {
 		E_PASSWORD = e_PASSWORD;
 	}
 
@@ -78,7 +81,7 @@ public class EmployeeDTO {
 		// TODO Auto-generated constructor stub
 	}
 
-	public EmployeeDTO(String eID, String e_NAME, int e_PASSWORD, String dEPARTMENT, String e_POSITION,
+	public EmployeeDTO(String eID, String e_NAME, String e_PASSWORD, String dEPARTMENT, String e_POSITION,
 			String pHONE_NUMBER, int sALARY, String jOIN_DATE) {
 		super();
 		EID = eID;
@@ -96,5 +99,14 @@ public class EmployeeDTO {
 		return "EmployeeDTO [EID=" + EID + ", E_NAME=" + E_NAME + ", E_PASSWORD=" + E_PASSWORD + ", DEPARTMENT="
 				+ DEPARTMENT + ", E_POSITION=" + E_POSITION + ", PHONE_NUMBER=" + PHONE_NUMBER + ", SALARY=" + SALARY
 				+ ", JOIN_DATE=" + JOIN_DATE + "]";
+	}
+	@Override
+	public int compareTo(EmployeeDTO s) {
+		if (Integer.parseInt(this.EID) < s.getID()) {
+            return -1;
+        } else if (Integer.parseInt(this.EID) > s.getID()) {
+            return 1;
+        }
+        return 0;
 	}
 }

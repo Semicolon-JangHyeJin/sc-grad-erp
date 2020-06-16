@@ -1,15 +1,18 @@
 package com.db;
-public class SaleDTO {
+public class SaleDTO implements Comparable<SaleDTO>{
 	private String SALE_CODE;
 	private String VENDOR_BID;
 	private String PRODUCT_ID;
 	private int S_AMOUNT;
 	private int S_UNIT_PRICE;
 	private int S_PRICE;
-	private String DEAL_ITEM_ID;
 	private String D_DATE;
 	private String SALE_EID;
-
+	
+	public int getID() {
+		return Integer.parseInt(SALE_CODE);
+	}
+	
 	public String getSALE_CODE() {
 		return SALE_CODE;
 	}
@@ -58,14 +61,6 @@ public class SaleDTO {
 		S_PRICE = s_PRICE;
 	}
 
-	public String getDEAL_ITEM_ID() {
-		return DEAL_ITEM_ID;
-	}
-
-	public void setDEAL_ITEM_ID(String dEAL_ITEM_ID) {
-		DEAL_ITEM_ID = dEAL_ITEM_ID;
-	}
-
 	public String getD_DATE() {
 		return D_DATE;
 	}
@@ -88,7 +83,7 @@ public class SaleDTO {
 	}
 
 	public SaleDTO(String sALE_CODE, String vENDOR_BID, String pRODUCT_ID, int s_AMOUNT, int s_UNIT_PRICE, int s_PRICE,
-			String dEAL_ITEM_ID, String d_DATE, String sALE_EID) {
+			String d_DATE, String sALE_EID) {
 		super();
 		SALE_CODE = sALE_CODE;
 		VENDOR_BID = vENDOR_BID;
@@ -96,7 +91,6 @@ public class SaleDTO {
 		S_AMOUNT = s_AMOUNT;
 		S_UNIT_PRICE = s_UNIT_PRICE;
 		S_PRICE = s_PRICE;
-		DEAL_ITEM_ID = dEAL_ITEM_ID;
 		D_DATE = d_DATE;
 		SALE_EID = sALE_EID;
 	}
@@ -105,6 +99,16 @@ public class SaleDTO {
 	public String toString() {
 		return "SaleDTO [SALE_CODE=" + SALE_CODE + ", VENDOR_BID=" + VENDOR_BID + ", PRODUCT_ID=" + PRODUCT_ID
 				+ ", S_AMOUNT=" + S_AMOUNT + ", S_UNIT_PRICE=" + S_UNIT_PRICE + ", S_PRICE=" + S_PRICE
-				+ ", DEAL_ITEM_ID=" + DEAL_ITEM_ID + ", D_DATE=" + D_DATE + ", SALE_EID=" + SALE_EID + "]";
+				+ ", D_DATE=" + D_DATE + ", SALE_EID=" + SALE_EID + "]";
+	}
+
+	@Override
+	public int compareTo(SaleDTO o) {
+		if (Integer.parseInt(this.SALE_CODE) < o.getID()) {
+            return -1;
+        } else if (Integer.parseInt(this.SALE_CODE) > o.getID()) {
+            return 1;
+        }
+        return 0;
 	}
 }

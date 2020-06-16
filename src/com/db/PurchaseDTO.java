@@ -1,15 +1,18 @@
 package com.db;
-public class PurchaseDTO {
+public class PurchaseDTO implements Comparable<PurchaseDTO>{
 	private String PURCHASE_CODE;
 	private String MATERIALS_ID;
 	private String SELLER_BID;
 	private int P_AMOUNT;
 	private int P_UNIT_PRICE;
 	private int P_PRICE;
-	private String DEAL_ITEM_ID;
 	private String D_DATE;
 	private String PURCHASE_EID;
 
+	public int getID() {
+		return Integer.parseInt(PURCHASE_CODE);
+	}
+	
 	public String getPURCHASE_CODE() {
 		return PURCHASE_CODE;
 	}
@@ -58,14 +61,6 @@ public class PurchaseDTO {
 		P_PRICE = p_PRICE;
 	}
 
-	public String getDEAL_ITEM_ID() {
-		return DEAL_ITEM_ID;
-	}
-
-	public void setDEAL_ITEM_ID(String dEAL_ITEM_ID) {
-		DEAL_ITEM_ID = dEAL_ITEM_ID;
-	}
-
 	public String getD_DATE() {
 		return D_DATE;
 	}
@@ -88,7 +83,7 @@ public class PurchaseDTO {
 	}
 
 	public PurchaseDTO(String pURCHASE_CODE, String mATERIALS_ID, String sELLER_BID, int p_AMOUNT, int p_UNIT_PRICE,
-			int p_PRICE, String dEAL_ITEM_ID, String d_DATE, String pURCHASE_EID) {
+			int p_PRICE, String d_DATE, String pURCHASE_EID) {
 		super();
 		PURCHASE_CODE = pURCHASE_CODE;
 		MATERIALS_ID = mATERIALS_ID;
@@ -96,7 +91,6 @@ public class PurchaseDTO {
 		P_AMOUNT = p_AMOUNT;
 		P_UNIT_PRICE = p_UNIT_PRICE;
 		P_PRICE = p_PRICE;
-		DEAL_ITEM_ID = dEAL_ITEM_ID;
 		D_DATE = d_DATE;
 		PURCHASE_EID = pURCHASE_EID;
 	}
@@ -105,6 +99,16 @@ public class PurchaseDTO {
 	public String toString() {
 		return "PurchaseDTO [PURCHASE_CODE=" + PURCHASE_CODE + ", MATERIALS_ID=" + MATERIALS_ID + ", SELLER_BID="
 				+ SELLER_BID + ", P_AMOUNT=" + P_AMOUNT + ", P_UNIT_PRICE=" + P_UNIT_PRICE + ", P_PRICE=" + P_PRICE
-				+ ", DEAL_ITEM_ID=" + DEAL_ITEM_ID + ", D_DATE=" + D_DATE + ", PURCHASE_EID=" + PURCHASE_EID + "]";
+				+ ", D_DATE=" + D_DATE + ", PURCHASE_EID=" + PURCHASE_EID + "]";
+	}
+
+	@Override
+	public int compareTo(PurchaseDTO o) {
+		if (Integer.parseInt(this.PURCHASE_CODE) < o.getID()) {
+            return -1;
+        } else if (Integer.parseInt(this.PURCHASE_CODE) > o.getID()) {
+            return 1;
+        }
+        return 0;
 	}
 }

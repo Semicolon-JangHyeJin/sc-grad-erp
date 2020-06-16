@@ -1,9 +1,13 @@
 package com.db;
-public class MaterialsDTO {
+public class MaterialsDTO implements Comparable<MaterialsDTO>{
 	private String MATERIALS_ID;
 	private String MATERIALS_NAME;
 	private int AMOUNT;
-
+	
+	public int getID() {
+		return Integer.parseInt(MATERIALS_ID);
+	}
+	
 	public String getMATERIALS_ID() {
 		return MATERIALS_ID;
 	}
@@ -44,5 +48,15 @@ public class MaterialsDTO {
 	public String toString() {
 		return "MaterialsDTO [MATERIALS_ID=" + MATERIALS_ID + ", MATERIALS_NAME=" + MATERIALS_NAME + ", AMOUNT="
 				+ AMOUNT + "]";
+	}
+
+	@Override
+	public int compareTo(MaterialsDTO o) {
+		if (Integer.parseInt(this.MATERIALS_ID) < o.getID()) {
+            return -1;
+        } else if (Integer.parseInt(this.MATERIALS_ID) > o.getID()) {
+            return 1;
+        }
+        return 0;
 	}
 }
